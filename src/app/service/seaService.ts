@@ -10,17 +10,16 @@ import { Observable } from 'rxjs';
   })
  
 export class seaService {
-    forgotPassword(email: string) {
-      throw new Error('Method not implemented.');
-    }
-    url: string = 'http://localhost:8089';
-
-    constructor(
-      private http: HttpClient,
-      private router : Router
-    ) {}
-    changePassword(pid: any,password:any):Observable<any> {
-        return this.http.post(this.url + "/api/patient/"+pid+"/"+password,{});
-      }
     
+  private apiUrl : string = 'http://localhost:8089';
+
+   
+    changePassword(pid: any,password:any):Observable<any> {
+        return this.http.post(this.apiUrl + "/api/auth/"+pid+"/"+password,{});
+      }
+      constructor(private http: HttpClient) {}
+
+      forgotPassword(body: { authEmailId: string }): Observable<{ authId: string }> {
+        return this.http.post<{ authId: string }>(`${this.apiUrl}/forgot-password`, body);
+      }
 }
