@@ -189,7 +189,7 @@ input[type="radio"] {
 }
 
 .signup-box a {
-  color: #ec1338;
+  color: #99162c;
   text-decoration: none;
   font-weight: bold;
 }
@@ -213,18 +213,22 @@ form .field input:focus::placeholder {
 
 .form-inner form .signup-link {
   text-align: center;
-  margin-top: 30px;
+  margin-top: 10px;
+  padding-right: 10%;
+  
 }
 
 .form-inner form .pass-link a,
 .form-inner form .signup-link a {
   color: #e4e5ea;
   text-decoration: none;
+  font-size:16px;
 }
 
 .form-inner form .pass-link a:hover,
 .form-inner form .signup-link a:hover {
   text-decoration: underline;
+  
 }
 
 form .btn {
