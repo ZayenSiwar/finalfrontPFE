@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <link rel="stylesheet"> 
+</head>
+<body>
+
+<div class="container">
+    <div class="wrapper">
+        <img src="../../assets/saeGroupe.png" alt="Logo de Smart" class="logo">
+        <div class="title-text">
+            <div class="title login" >SmartGo</div>
+            <div class="title signup">SmartGo</div>
+        </div>
+        <div class="form-container">
+          <div class="slide-controls">
+            <input type="radio" name="slide" id="login" >
+            <input type="radio" name="slide" id="signup"checked>
+            <label for="login" class="slide login" routerLink="/login">login  </label>
+            <div class="slider-tab"></div>
+            <label for="signup" class="slide signup" >Signup</label>
+          
+        </div>
+        <div class="form-inner">
+          <form action="#" class="signup">
+            <div class="field">
+                <input type="text" placeholder="Email Address" required>
+            </div>
+            <div class="field">
+                <input type="password" placeholder="Password" required>
+            </div>
+            <div class="field">
+                <input type="password" placeholder="Confirm password" required>
+            </div>
+            <div class="field btn">
+                <div class="btn-layer"></div>
+                <input type="submit" value="login" routerLink="/login" >   
+            </div>
+        </form>
+        
+               
+              
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

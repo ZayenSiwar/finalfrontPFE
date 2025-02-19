@@ -1,16 +1,20 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AuthComponent } from './auth/auth.component';
+import { SignupComponent } from './signup/signup.component'; 
+import { LoginComponent } from './login/login.component'; 
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { ChangePasswordComponent } from './change-password/change-password.component';
 
-
-export const routes: Routes = [
-  { path: '', component: AuthComponent },
-  { path: 'forgot-password', component: ForgotPasswordComponent },
- 
+const routes: Routes = [
+  { path: 'signup', component: SignupComponent },
+  { path: 'login', component: LoginComponent },
+  { path: '', component: LoginComponent },
+  { path: 'forgot', component: ForgotPasswordComponent },
+  { path: 'changepassword/:token', component: ChangePasswordComponent },
 ];
+
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
