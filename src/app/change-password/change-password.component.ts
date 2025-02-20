@@ -11,13 +11,13 @@ import { take } from 'rxjs';
 export class ChangePasswordComponent {
 
 
-
+  email: string = '';
   currentPassword: string = '';
   newPassword: string = '';
   confirmPassword: string = '';
 
   constructor(private service: SeaService) {}
-    
+
   onChangePassword(): void {
     if (this.newPassword !== this.confirmPassword) {
       alert("Les mots de passe ne correspondent pas.");
@@ -37,6 +37,11 @@ export class ChangePasswordComponent {
     });
   }
 
+    onSubmit() {
+        // Logique pour changer le mot de passe
+        console.log('Mot de passe changé !');
+        // Vous pouvez également ajouter votre logique ici pour envoyer une requête à votre backend
+    }
   private resetFields(): void {
     this.currentPassword = '';
     this.newPassword = '';

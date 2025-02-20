@@ -10,7 +10,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: '', component: LoginComponent },
   { path: 'forgot', component: ForgotPasswordComponent },
-  { path: 'changepassword/:token', component: ChangePasswordComponent },
+  { path: 'changepassword', component: ChangePasswordComponent },
 ];
 
 @NgModule({

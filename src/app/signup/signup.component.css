@@ -8,9 +8,10 @@
 }
 
 html, body {
-  margin: 0;
+
   padding: 0;
-  background: -webkit-linear-gradient(left, #003366, #004080, #0059b3, #0073e6);
+  margin: 0;
+    background-color: #f0f0f0; 
 }
 
 body {

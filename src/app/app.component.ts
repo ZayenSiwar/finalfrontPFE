@@ -9,6 +9,14 @@ import { UserRole } from '../app/model/user-roles'; // Assurez-vous que le chemi
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  isLoaded: boolean = false;
+
+  ngOnInit() {
+    // Simuler un délai pour le chargement (remplacez par votre logique de chargement réelle)
+    setTimeout(() => {
+      this.isLoaded = true;
+    }, 0); // Mettre 0 pour que cela se lance immédiatement
+  }
   title(title: any) {
     throw new Error('Method not implemented.');
   }
